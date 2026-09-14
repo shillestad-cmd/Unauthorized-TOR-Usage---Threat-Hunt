@@ -1,5 +1,6 @@
 <p align="center">
-  <img src="images/00-tor-banner.png" alt="Tor project banner" width="700">
+ <img width="1645" height="956" alt="image" src="https://github.com/user-attachments/assets/d2ba514c-a554-4060-8fb2-aed28702e631" />
+
 </p>
 
 # Threat Hunt: Unauthorized Tor Browser Usage
@@ -50,7 +51,7 @@ The employee launched the installer from an elevated Command Prompt using the `/
 
 A silent installation can reduce what appears on the screen, but it does not make the activity invisible to security monitoring. The installer’s execution and the files it created provided evidence for the subsequent investigation.
 
-![Tor Browser installer and silent installation command](images/01-silent-install-command.png)
+<img width="1454" height="944" alt="image" src="https://github.com/user-attachments/assets/071f31fd-b28c-4bf4-b896-4f00afa41d1d" />
 
 ### 3. Launching Tor Browser
 
@@ -60,7 +61,7 @@ Tor Browser uses a browser component based on Firefox and a Tor component that h
 
 Tor’s privacy features do not prevent endpoint security software from recording activity on the computer itself. The investigation could examine program execution and connections even though those records did not reveal every page viewed.
 
-![Tor Browser landing page](images/02-tor-connected.png)
+<img width="1558" height="1180" alt="image" src="https://github.com/user-attachments/assets/635105e4-4ec2-412d-a11f-1024513f0b5e" />
 
 ### 4. Browsing Dark Web Content
 
@@ -70,9 +71,11 @@ The term **dark web** refers to services deliberately hosted on networks requiri
 
 Within the simulation, the unauthorized Tor usage violated company policy. The browsing screenshots documented the pages displayed, while the threat hunt separately examined what the workstation’s security records could establish.
 
-![Dread DarkNetMarkets section](images/03-darknet-markets.png)
+<img width="1668" height="1205" alt="image" src="https://github.com/user-attachments/assets/9c2348a5-8f5d-4273-b0db-f44ee37a5315" />
 
-![Page displaying illicit substance listings](images/04-market-listings.png)
+
+<img width="1654" height="1203" alt="image" src="https://github.com/user-attachments/assets/399e2bac-e3b5-44dc-affd-dbe17b735562" />
+
 
 ### 5. Creating a Local Shopping List
 
@@ -82,7 +85,8 @@ This file became an additional piece of evidence, often called an **artifact**: 
 
 The shopping list was created solely for the lab exercise. Its contents did not establish that a purchase or payment occurred.
 
-![Simulated shopping list on the desktop](images/05-shopping-list.png)
+<img width="1373" height="902" alt="image" src="https://github.com/user-attachments/assets/f1a72b60-cc2f-4b89-b788-cd539436c26d" />
+
 
 ## Threat Hunt: Investigation and Findings
 
@@ -121,7 +125,8 @@ Those details provided supporting context: **what the file was called, where it 
 
 The same search also returned files associated with the later installation and a text file named `tor-shopping-list.txt`. These became leads for the next stages of the investigation.
 
-![File events identifying the installer and related artifacts](images/06-installer-download-evidence.png)
+<img width="2048" height="728" alt="image" src="https://github.com/user-attachments/assets/eea16196-494c-4149-9a61-5c1f486a49ad" />
+
 
 ### 2. Confirming Silent Installation
 
@@ -144,7 +149,8 @@ File events around **1:35:12–1:35:16 PM** then showed Tor components and a bro
 
 **The execution record showed the installer running, while the subsequent file records showed it placing the browser’s components on the workstation.** Together, they supported the silent installation finding.
 
-![Process event showing silent installer execution](images/07-silent-install-evidence.png)
+<img width="1867" height="1004" alt="image" src="https://github.com/user-attachments/assets/fae80b4a-1f7e-43a4-a045-8929b16a3f63" />
+
 
 ### 3. Confirming Tor Browser Execution
 
@@ -165,7 +171,7 @@ The file paths were particularly useful. They placed both programs inside the de
 
 These records supported the finding that **the installed Tor Browser had been launched**. The next step was to determine whether it established network connections.
 
-![Process events showing Tor Browser execution](images/08-browser-process-evidence.png)
+<img width="2047" height="995" alt="image" src="https://github.com/user-attachments/assets/ded8418f-1297-4ac2-b6ab-6328a49a3686" />
 
 ### 4. Examining Network Activity
 
@@ -191,7 +197,7 @@ Port **9150** was the connection point for Tor Browser’s local SOCKS proxy. Th
 
 Together, the successful browser-to-proxy connection and external connections from `tor.exe` supported active Tor usage. These records showed how the programs communicated, but **they did not establish which onion sites or pages the employee visited**.
 
-![Network events showing local proxy communication and external connections](images/09-network-events.png)
+<img width="1870" height="1132" alt="image" src="https://github.com/user-attachments/assets/d95b25ed-e533-4dd2-a72c-c50987cac4f6" />
 
 ### 5. Locating the Shopping List
 
@@ -216,7 +222,8 @@ The initial query recorded a `FileCreated` event initiated by `notepad.exe` at *
 
 The account, location, and timing connected the file to the investigation. However, **the filename and creation event did not reveal its contents**. Reviewing the actual file was necessary to determine its relevance.
 
-![File events identifying the shopping list location](images/10-shopping-list-path.png)
+<img width="1417" height="798" alt="image" src="https://github.com/user-attachments/assets/88775949-14ea-4e2b-bd30-0cda5830dc10" />
+
 
 ### 6. Collecting and Reviewing the File
 
@@ -232,7 +239,7 @@ This added context beyond the event logs. The logs established that the file exi
 
 Within the simulation, the contents supported the investigation into inappropriate use of company equipment. **They did not establish that a purchase, payment, or transaction occurred.** The retrieval shown below was an analyst’s evidence-collection action during the investigation.
 
-![Live Response collection and review of the shopping list](images/11-live-response-collection.png)
+<img width="1660" height="805" alt="image" src="https://github.com/user-attachments/assets/8e7f4bc7-605a-4b51-9661-cc0518b572f4" />
 
 ## Reconstructed Timeline
 
